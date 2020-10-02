@@ -36,9 +36,9 @@ Os usuários poderão:
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek2" title="#NextLevelWeek2" src="./assets/proffycadastro.gif" height="400px">
+  <img alt="movieApp" title="#movieApp" src="./assets/movie-app.gif" height="400px">
 
-  <img alt="NextLevelWeek2" title="#NextLevelWeek2" src="./assets/proffybuscar.gif" height="400px">
+  
 </p>
 
 ## 🛠 Tecnologias
