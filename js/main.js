@@ -1,4 +1,3 @@
-const APIKEY = '';
 const APIURL = 'https://api.themoviedb.org/3/discover/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&sort_by=popularity.desc&include_adult=false&page=1';
 
 const IMGPATH = 'https://image.tmdb.org/t/p/w1280/'
