@@ -20,7 +20,22 @@ header{
     background-color: var(--gray);
     padding: 1.5rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation a{
+    color:var(--white);
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+    transition: all .3s ease-in-out;
+}
+
+.navigation a:hover{
+    background-color: var(--white);
+    color: var(--primary-color);
 }
 
 .search{
@@ -110,3 +125,5 @@ main{
   .movie:hover .overview{
     transform: translateY(0);
   }
+
+ 

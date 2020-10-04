@@ -1,4 +1,4 @@
-const URLMOVIES = 'https://api.themoviedb.org/3/discover/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&sort_by=popularity.desc&page='
+const URLTVS = 'https://api.themoviedb.org/3/discover/tv?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&sort_by=popularity.desc&page='
 
 const IMGPATH = 'https://image.tmdb.org/t/p/w1280/'
 const SEARCHAPI = 'https://api.themoviedb.org/3/search/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&query='
@@ -9,7 +9,7 @@ const search = document.querySelector('#search')
 const nav = document.querySelector('.navigation')
 
 
-getMovies(URLMOVIES)
+getMovies(URLTVS)
 
 async function getMovies(url){
    const resp = await fetch(url)
@@ -22,20 +22,20 @@ async function getMovies(url){
 }
 
 
-function showMovies(movies){
+function showMovies(tvs){
 
     main.innerHTML = ''
 
-    movies.forEach((movie) =>{ 
-        const { poster_path, title, vote_average, overview} = movie
-        const movieEl = document.createElement('div')
+    tvs.forEach((tv) =>{ 
+        const { poster_path, name, vote_average, overview} = tv
+        const tvEl = document.createElement('div')
  
-        movieEl.classList.add('movie')
+        tvEl.classList.add('movie')
 
-        movieEl.innerHTML = `
-         <img src="${IMGPATH + poster_path}" alt="${title}">
+        tvEl.innerHTML = `
+         <img src="${IMGPATH + poster_path}" alt="${name}">
          <div class="movie-info">
-             <h3>${title}</h3>
+             <h3>${name}</h3>
              <span class="${getClassByRate(vote_average)}">${vote_average}</span>
          </div>
          <div class="overview">
@@ -44,7 +44,7 @@ function showMovies(movies){
          </div>
         `
  
-        main.appendChild(movieEl)
+        main.appendChild(tvEl)
     })
 }
 
