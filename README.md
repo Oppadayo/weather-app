@@ -73,5 +73,5 @@ $ start chrome index.html
 
 ### 📝 ToDos
 - [ ] Paginação.
-- [ ] Adicionar menu para acesso além dos filmes.
+- [ x ] Adicionar menu para acesso além dos filmes.
 

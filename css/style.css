@@ -126,4 +126,17 @@ main{
     transform: translateY(0);
   }
 
- 
+ @media (max-width: 600px){
+     
+        header{
+            background-color: var(--gray);
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .navigation{
+            margin-bottom: 2rem;
+        }
+ }
