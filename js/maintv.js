@@ -1,7 +1,7 @@
 const URLTVS = 'https://api.themoviedb.org/3/discover/tv?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&sort_by=popularity.desc&page='
 
 const IMGPATH = 'https://image.tmdb.org/t/p/w1280/'
-const SEARCHAPI = 'https://api.themoviedb.org/3/search/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&query='
+const SEARCHAPI = 'https://api.themoviedb.org/3/search/tv?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&query='
 
 const main = document.querySelector('main')
 const form = document.querySelector('form')
