@@ -18,7 +18,7 @@ const main = document.querySelector('main')
 getWeather()
 
 async function getWeather(){
-   const resp = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${pos.lat}&lon=${pos.lng}&units=metric&appid=${api.key}&lang=pt_br`)
+   const resp = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.lat}&lon=${pos.lng}&units=metric&appid=${api.key}&lang=pt_br`)
    const respData = await resp.json()
    
    console.log(pos.lat)
