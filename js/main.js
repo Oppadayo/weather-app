@@ -1,75 +1,64 @@
-const URLMOVIES = 'https://api.themoviedb.org/3/discover/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&sort_by=popularity.desc&page='
 
-const IMGPATH = 'https://image.tmdb.org/t/p/w1280/'
-const SEARCHAPI = 'https://api.themoviedb.org/3/search/movie?api_key=cec10ecab8ad0684310ec83287fe711a&language=pt-BR&query='
+
+navigator.geolocation.getCurrentPosition((position =>{
+    const pos = {
+        lat: Math.round(position.coords.latitude),
+        lng: Math.round(position.coords.longitude),
+    },
+    
+    api = {
+        key: 'b214b715505c2a20762a26e98b4cfb64',
+        base: 'api.openweathermap.org/data/2.5/'
+    }
+
 
 const main = document.querySelector('main')
-const form = document.querySelector('form')
-const search = document.querySelector('#search')
-const nav = document.querySelector('.navigation')
 
 
-getMovies(URLMOVIES)
+getWeather()
 
-async function getMovies(url){
-   const resp = await fetch(url)
+async function getWeather(){
+   const resp = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${pos.lat}&lon=${pos.lng}&units=metric&appid=${api.key}&lang=pt_br`)
    const respData = await resp.json()
    
-   
-   showMovies(respData.results)
+   console.log(pos.lat)
+
+   showWeather(respData)  
   
-  
+}
+
+const date = (d) =>{
+    
+    let months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+
+    let days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+
+    let day = days[d.getDay()]
+    let date = d.getDate()
+    let month = months[d.getMonth()]
+    let year = d.getFullYear()
+
+    return `${day}, ${date} de ${month} de ${year}`
 }
 
 
-function showMovies(movies){
+function showWeather(weather){
 
-    main.innerHTML = ''
-
-    movies.forEach((movie) =>{ 
-        const { poster_path, title, vote_average, overview} = movie
-        const movieEl = document.createElement('div')
+    main.innerHTML = ''    
+        
+        const weatherEl = document.createElement('div')       
  
-        movieEl.classList.add('movie')
+        weatherEl.classList.add('card')
 
-        movieEl.innerHTML = `
-         <img src="${IMGPATH + poster_path}" alt="${title}">
-         <div class="movie-info">
-             <h3>${title}</h3>
-             <span class="${getClassByRate(vote_average)}">${vote_average}</span>
-         </div>
-         <div class="overview">
-            <h3>Sinopse:</h3>
-            ${overview}
-         </div>
-        `
+        weatherEl.innerHTML = `
+            <p>${weather.name}</p>
+            <span class="date">${date(new Date())}</span>
+            
+             <h1>${Math.round(weather.main.temp)}°</h1> 
+             <span>${weather.weather[0].description}</span>
+             `
  
-        main.appendChild(movieEl)
-    })
+        main.appendChild(weatherEl)
 }
 
-function getClassByRate(vote){
-    if(vote >= 8){
-        return 'green'
-    } else if(vote >= 5){
-        return 'orange'
-    }else{
-        return 'red'
-    }
-}
-
-
-form.addEventListener('submit', (e) =>{
-    e.preventDefault()
-
-    const searchItem = search.value
-
-    if(searchItem){
-        getMovies(SEARCHAPI + searchItem)
-        search.value = ''
-    }
-})
-
-
-
- 
+}))
