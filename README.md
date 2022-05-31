@@ -3,35 +3,28 @@
 </h1>
 
 <h4 align="center"> 
-	Movie App
+	Weather App
 </h4>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Oppadayo/movie-app?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Oppadayo/weather-app?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Oppadayo/movie-app">	
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Oppadayo/weather-app">	
   
-  <a href="https://github.com/Oppadayo/movie-app/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oppadayo/movie-app">
+  <a href="https://github.com/Oppadayo/weather-app/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oppadayo/weather-app">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
-   <a href="https://github.com/Oppadayo/movie-app/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/Oppadayo/movie-app?style=social">
+   <a href="https://github.com/Oppadayo/weather-app/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Oppadayo/weather-app?style=social">
   </a>
 </p>
 
 
 ## 💻 Sobre o projeto
 
-📚 Movie App - é uma aplicação web que mostra uma lista de filmes
-
-Os usuários poderão:
-- ver a lista de filmes em alta
-- pesquisar por filmes 
-- Verificar a nota do IMDB
-- Ler a sinopse dos filmes
-
+📚 Weather App - é uma aplicação web que fornece informações sobre o clima
 
 ### Web
 
@@ -62,17 +55,15 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/Oppadayo/movie-app
+$ git clone https://github.com/Oppadayo/weather-app
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd movie-app
+$ cd weather-app
 
 # Execute a aplicação em modo de desenvolvimento
 $ start chrome index.html
 ```
 
 ### 📝 ToDos
-- [ ] Paginação.
-- [ x ] Adicionar menu para acesso além dos filmes.
-
-"# weather-app" 
+- [ ] Adicionar previsão semanal
+- [ ] Adicionar pesquisa do clima em outra cidade
