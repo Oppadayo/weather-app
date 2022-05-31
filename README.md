@@ -26,14 +26,7 @@
 
 📚 Weather App - é uma aplicação web que fornece informações sobre o clima
 
-### Web
-
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="movieApp" title="#movieApp" src="./assets/movie-app.gif" height="400px">
-
   
-</p>
-
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
